@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "motion/react";
 import { ThemeToggleButton2 } from "@/components/ui/skiper-ui/skiper4";
-
 import { useTheme } from "next-themes";
 
 const Navbar = () => {
@@ -73,12 +72,15 @@ const Navbar = () => {
             </svg>
           </Link>
         </div>
-        <div className="flex items-center bg-neutral-400/20 rounded-2xl px-4 py-5">
+        <motion.div
+          layout
+          className="flex items-center bg-neutral-400/20 rounded-2xl px-4 py-5"
+        >
           <ThemeToggleButton2 className="h-5 w-5" />
           <span className="ml-2 text-xs">
             {isDark ? "Dark Mode" : "Light Mode"}
           </span>
-        </div>
+        </motion.div>
       </motion.nav>
     </>
   );
