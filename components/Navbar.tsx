@@ -73,6 +73,7 @@ const Navbar = () => {
           </Link>
         </div>
         <motion.div
+          onClick={theme === "dark" ? () => theme : () => theme}
           layout
           className="flex items-center bg-neutral-400/20 rounded-2xl px-4 py-5"
         >
