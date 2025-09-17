@@ -154,7 +154,7 @@ const page = () => {
       </motion.div>
       <Category />
       <div className="max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8 py-12 absolute inset-0 top-430 grid grid-cols-5 gap-6 rounded-3xl">
-        <div className="flex flex-col space-y-4 col-span-1 bg-neutral-400 p-4 rounded-3xl text-neutral-900 h-[900px] overflow-y-auto">
+        <div className="flex flex-col space-y-4 col-span-1 bg-neutral-400 dark:bg-neutral-800 p-4 rounded-3xl text-neutral-900 dark:text-neutral-200 h-[900px] overflow-y-auto">
           <h2 className="text-2xl font-bold">Filters</h2>
           <h3 className="text-lg font-semibold">Gender</h3>
           <ul className="space-y-2">
@@ -217,9 +217,11 @@ const page = () => {
                   className="w-full h-64 object-cover rounded-2xl mb-4"
                 />
                 <div className="h-16 ">
-                  <Heart className="active:scale-95 active:text-pink-600 transition-transform" />
+                  <Heart className="active:scale-95text-neutral-900 active:text-pink-600 transition-transform" />
                 </div>
-                <h3 className="text-xl font-semibold">{product.name}</h3>
+                <h3 className="text-xl font-semibold text-neutral-900">
+                  {product.name}
+                </h3>
                 <p className="text-lg text-green-500 font-bold">
                   {product.price}
                 </p>
